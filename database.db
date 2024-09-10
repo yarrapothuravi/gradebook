@@ -1,0 +1,26 @@
+-- Create Students Table
+CREATE TABLE IF NOT EXISTS students (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    subject TEXT NOT NULL,
+    grade TEXT NOT NULL
+);
+
+-- Insert Sample Data into Students Table
+INSERT INTO students (name, subject, grade) VALUES 
+('Alice Smith', 'Mathematics', 'A'),
+('Bob Johnson', 'Physics', 'B+'),
+('Charlie Brown', 'Chemistry', 'A-'),
+('David Williams', 'Biology', 'B');
+
+-- Select All Students (For Testing)
+SELECT * FROM students;
+
+-- Update a Student's Grade (Example)
+UPDATE students
+SET grade = 'A+'
+WHERE name = 'Bob Johnson';
+
+-- Delete a Student Record (Example)
+DELETE FROM students
+WHERE name = 'David Williams';

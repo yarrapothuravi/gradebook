@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade System</title>
+</head>
+<body>
+    <h1>Student Grade/Result Management System</h1>
+    <a href="{{ url_for('add_student') }}">Add New Student</a>
+    
+    <h2>Students</h2>
+    <ul>
+        {% for student in students %}
+        <li>
+            <a href="{{ url_for('view_student', id=student[0]) }}">{{ student[1] }} - {{ student[2] }} ({{ student[3] }})</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
